@@ -2,24 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Darren Teng | Developer</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Darren Teng</h1>
-  <p>Software Developer | Python | Web</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="darkModeToggle">🌙</button></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>
-      <strong>File Analyzer CLI Tool</strong><br>
-      <a href="https://github.com/Ren-DevOP/file-analyzer">View on GitHub</a>
-    </li>
-  </ul>
+  <section id="home">
+    <h1>Darren Teng</h1>
+    <p>Software Developer | Python | Web | Full-Stack</p>
+  </section>
 
-  <h2>Contact</h2>
-  <p>
-    <a href="https://github.com/Ren-DevOP">GitHub</a>
-  </p>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>File Analyzer CLI Tool</h3>
+        <p>Python CLI tool that analyzes text files.</p>
+        <a href="https://github.com/Ren-DevOP/file-analyzer" target="_blank">View on GitHub</a>
+      </div>
+      <!-- Add more project cards here -->
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      <a href="https://github.com/Ren-DevOP" target="_blank">GitHub</a>
+    </p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
