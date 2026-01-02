@@ -28,28 +28,3 @@ sections.forEach(section => {
   section.classList.add('hidden');
   observer.observe(section);
 });
-
-async function loadProjects() {
-  try {
-    const response = await fetch("http://127.0.0.1:8000/projects");
-    const projects = await response.json();
-
-    const grid = document.querySelector(".project-grid");
-    grid.innerHTML = "";
-
-    projects.forEach(project => {
-      const card = document.createElement("div");
-      card.className = "project-card";
-      card.innerHTML = `
-        <h3>${project.name}</h3>
-        <p>${project.description}</p>
-        <a href="${project.github}" target="_blank">View on GitHub</a>
-      `;
-      grid.appendChild(card);
-    });
-  } catch (error) {
-    console.error("Failed to load projects:", error);
-  }
-}
-
-window.addEventListener("DOMContentLoaded", loadProjects);
